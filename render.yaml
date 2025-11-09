@@ -1,0 +1,15 @@
+# render.yaml - colocar na raiz do repo
+services:
+  - type: web
+    name: api-python
+    env: python
+    region: oregon                # opcional: ajustar para a região que preferires
+    plan: free                   # free | starter | standard ...
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+
+previews:
+  generation: automatic
