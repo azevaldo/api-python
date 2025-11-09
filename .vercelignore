@@ -1,0 +1,12 @@
+# Ignorar arquivos de cache, builds, notebooks, etc.
+*.ipynb
+*.pyc
+__pycache__/
+.cache/
+node_modules/
+.env
+.env.local
+*.db
+*.csv
+*.xlsx
+*.zip
